@@ -45,17 +45,19 @@ TW_INCLUDE_REPACKTOOLS := true
 
 AB_OTA_PARTITIONS += \
     boot \
+    custom \
     dtbo \
+    elabel \
     lk \
+    md1img \
     preloader \
-    odm \
-    product \
+    scp \
+    spmfw \
+    sspm \
     system \
-    system_ext \
+    tee \
     vbmeta \
-    vbmeta_vendor \
-    vbmeta_system \
-    vendor
+    vendor 
 
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
