@@ -1,18 +1,12 @@
 LOCAL_PATH := device/umidigi/Power_5
 
-# Dynamic Partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
 # VNDK
-PRODUCT_TARGET_VNDK_VERSION := 30
+PRODUCT_TARGET_VNDK_VERSION := 28
 
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
-PRODUCT_PLATFORM := mt6765
-
-# A/B
-ENABLE_VIRTUAL_AB := true
+PRODUCT_PLATFORM := mt6761
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -35,11 +29,6 @@ PRODUCT_PACKAGES += \
     update_verifier \
     update_engine_sideload
     
-    
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
-    fastbootd
-
 # health Hal
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
