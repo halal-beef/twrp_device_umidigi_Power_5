@@ -21,28 +21,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
-# Virtual A/B OTA
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
-
 # Inherit from star device
-$(call inherit-product, device/umidigi/Power_5/device.mk)
+$(call inherit-product, device/nokia/WSP_sprout/device.mk)
 
 # Inherit some common recovery stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := Power_5
-PRODUCT_NAME := twrp_Power_5
-PRODUCT_BRAND := UMIDIGI
-PRODUCT_MODEL := Power 5
-PRODUCT_MANUFACTURER := HXY
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=Power_5 \
-    PRODUCT_NAME=Power_5 \
-    PRIVATE_BUILD_DESC="full_g2139dpr_v1_gf_ym_power5_r-user 11 RP1A.200720.011 2106051522 release-keys"
-
-BUILD_FINGERPRINT := UMIDIGI/Power_5/Power_5:11/RP1A.200720.011/2106051522:user/release-keys
+PRODUCT_DEVICE := WSP_sprout
+PRODUCT_NAME := twrp_WSP_sprout
+PRODUCT_BRAND := Nokia
+PRODUCT_MODEL := 2.2
+PRODUCT_MANUFACTURER := HMD Global
 
 # HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \
