@@ -1,4 +1,4 @@
-LOCAL_PATH := device/umidigi/Power_5
+LOCAL_PATH := device/nokia/WSP_sprout
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 28
